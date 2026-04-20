@@ -1,101 +1,91 @@
 
-# Online Learning Platform
+# DigiPatashala
 
-Online Learning Platform using MERN Stack,
-Please visit [here](https://code2tutorial.com/tutorial/55a23a94-6cb7-4c48-92c1-f96db207f791/index.md) for a better understanding of the project.
-## Objective:
+DigiPatashala is a fullstack online learning platform built with React, Vite, Node.js, Express, and MongoDB.
 
-Develop a comprehensive online learning platform with three user types (Student, Teacher, Admin), featuring course creation, approval process, and live video conferencing.
+## Repository Structure
 
-## *BACKEND for the PROJECT
-   - Backend is developed by [Parag](https://github.com/paragkadyan).
+- `.vscode/` — editor settings
+- `backend/` — Node.js + Express server code
+- `frontend/` — React + Vite frontend application
+- `.env.example` — example environment variables
+- `package.json` — project dependencies for the root workspace
 
 ## Features
-![Screenshot 2024-05-14 212028](https://github.com/Pika003/e-Learning-Platform/assets/104189733/e2f9ce48-764b-48d2-8af1-188ea2918e8c)
 
+- User authentication for students, teachers, and admin
+- Course browsing, creation, and enrollment
+- Document verification and approval workflows
+- Payment integration using Razorpay
+- Email notifications via SMTP
+- Cloudinary uploads for images/videos
+- Role-based dashboards for students and teachers
 
-#### 1. *User Authentication:*
-   - Student Login [/login]
-   - Teacher Login [/login]
-   - Admin Login [/adminLogin]
+## Tech Stack
 
-     ![Screenshot 2024-05-14 211251](https://github.com/Pika003/e-Learning-Platform/assets/104189733/3179ba23-ae52-4ab5-8d0a-b2891cc43e0f)
+- Frontend: React, Vite, Tailwind CSS, Material Tailwind
+- Backend: Node.js, Express, MongoDB, Mongoose
+- Authentication: JWT tokens
+- File uploads: Cloudinary
+- Payment: Razorpay
 
-![Screenshot 2024-05-14 211154](https://github.com/Pika003/e-Learning-Platform/assets/104189733/377d8aa0-c35b-46d0-9408-f18b6ecb1ac1)
+## Available Commands
 
-#### 2. *Application Approval:*
-   - Students and teachers can submit applications for approval.
-   - Admin validates and approves applications.
-
-     ![Screenshot 2024-05-15 212149](https://github.com/Pika003/e-Learning-Platform/assets/104189733/6e8afdba-a8a5-47e3-977c-f5292e136c3f)
-
-
-#### 3. *Dashboard:*
-   - Students see purchased courses, progress, and communication options.
-   - Teachers view created courses, student enrollments, and communication features.
-
-     
-![Screenshot 2024-05-14 211938](https://github.com/Pika003/e-Learning-Platform/assets/104189733/1008e68d-b683-4e8a-bc85-6d5890946724)
-![Screenshot 2024-05-14 211854](https://github.com/Pika003/e-Learning-Platform/assets/104189733/c857a214-5366-49db-8035-13d2bfb88396)
-#### 4. *Course Purchase:*
-
-   - Students can browse and buy courses on the platform.
-     
-![Screenshot 2024-05-14 211813](https://github.com/Pika003/e-Learning-Platform/assets/104189733/1578ca04-b85d-4c7b-8875-12f6756f2621)
-
-#### 5. *Live Video Conferencing:*
-   - Integrated video conferencing tool (similar to Google Meet) for real-time teacher-student interaction.
-
-#### 6. *Communication:*
-   - An in-platform messaging system for communication between teachers and students.
-
-#### 7. *Payment Integration:*
-   - Integrate a secure payment gateway for course purchases.
-
-----
-
-
-## *Tech Stack:*
-
-#### *UI/UX:*
-  - [figma](https://www.figma.com/file/6b4R8evBkii6mI53IA4vSS/Online-Learning-Platform?type=design&node-id=0-1&mode=design&t=HBUPk2hRYW3ioAUj-0) 
-  - Dribbble
-
-#### *Frontend:*
-  - React (Vite) for dynamic and responsive UI.
-
-#### *Backend:*
-  - Node.js, Express and Mongoose for server-side development.
-
-#### *Database:*
-  - MongoDB for storing user profiles, course details, and application data.
-
-#### *Authentication:*
-  - JWT (JSON Web Tokens) for secure authentication.
-
-#### *Video Conferencing:*
-
----
-
-## 🛠️ Installation & Running Locally
-
-Follow the steps below to run the project on your local machine.
-
-### ✅ Prerequisites
-
-- [Node.js](https://nodejs.org/) (v14 or above)
-- [MongoDB](https://www.mongodb.com/) (local or Atlas cloud)
-- [Git](https://git-scm.com/)
-
----
-
-### 📦 Clone the Repository
+### Backend
 
 ```bash
-git clone https://github.com/Pika003/e-Learning-Platform.git
-cd e-Learning-Platform
-  - Fill the env file with your credentials
+cd backend
 npm install
 npm run dev
+```
+
+The backend uses:
+- `nodemon -r dotenv/config --experimental-json-modules src/index.js`
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Available frontend commands:
+- `npm run dev`
+- `npm run build`
+- `npm run preview`
+
+## Environment Variables
+
+Copy `.env.example` to `.env` and update the values.
+
+Example variables:
+
+```env
+TEST=true
+PORT=5002
+DB_NAME=elearning_db
+MONGO_URI=mongodb+srv://username:password@cluster0.mongodb.net/elearning_db
+JWT_SECRET=secretkey
+ACCESS_TOKEN_SECRET=secretkey
+ACCESS_TOKEN_EXPIRY=1d
+REFRESH_TOKEN_SECRET=refreshsecretkey
+REFRESH_TOKEN_EXPIRY=7d
+CORS=*
+SMTP_EMAIL=yourgmail@gmail.com
+SMTP_PASS=your_app_password
+CLOUDINARY_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_SECRET_KEY=your_secret_key
+KEY_ID=rzp_test_xxxxx
+KEY_SECRET=your_secret_key
+FRONTEND_URL=http://localhost:3000
+```
+
+## Notes
+
+- This repository currently includes separate `backend` and `frontend` folders.
+- Make sure MongoDB Atlas or local MongoDB is available before starting the backend.
+- Set correct frontend URL and CORS values in `.env` if you deploy the frontend and backend separately.
 
 
