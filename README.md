@@ -79,7 +79,7 @@ CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_SECRET_KEY=your_secret_key
 KEY_ID=rzp_test_xxxxx
 KEY_SECRET=your_secret_key
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:5173
 ```
 
 ## Notes
